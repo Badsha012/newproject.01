@@ -1,15 +1,12 @@
 #include<stdio.h>
-int result(int a,int b,int *s);
 int main()
 {
-    int x,y,sum;
-    scanf("%d%d",&x,&y);
-    result(x,y,&sum);
-    printf("summacation of=%d\n",sum);
+    int a,b,diff;
+    int *ptr1=&a,*ptr2=&b,*ptr3=&diff;
+    *ptr1=18;
+    *ptr2=5;
+    *ptr3=*ptr1 - *ptr2;
+    printf("the different number is=%d\n",*ptr3);
     return 0;
-}
-int result(int a,int b,int *s)
-{
-    *s=a+b;
-    return *s;
+
 }
